@@ -11,5 +11,5 @@
 - [![SwiftUi 뽀개기](https://i9.ytimg.com/vi/F9hnLQOgsqk/mqdefault.jpg?v=613d9036&sqp=CJS_9okG&rs=AOn4CLAl7OR0vjPaK_GzljV2NAYpehNRUQ)](https://youtu.be/F9hnLQOgsqk)
 
 ### 3. 웹뷰 뽀개기 당겨서 새로고침
-- branch : 01_js_ios_communicate
+- branch : 02_webview_refresh_control
 - [![SwiftUi 뽀개기](https://i9.ytimg.com/vi/wMvaxgXS7yQ/mqdefault.jpg?v=613dc479&sqp=CJSK94kG&rs=AOn4CLAc5wiqMBkyXUjVtoY6swgSG2yRrw)](https://youtu.be/wMvaxgXS7yQ)
