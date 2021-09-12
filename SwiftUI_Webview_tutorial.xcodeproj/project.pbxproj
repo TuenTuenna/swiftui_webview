@@ -19,6 +19,7 @@
 		F2B4AFA024AD615B008402EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B4AF9F24AD615B008402EE /* Preview Assets.xcassets */; };
 		F2B4AFA324AD615B008402EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B4AFA124AD615B008402EE /* LaunchScreen.storyboard */; };
 		F2B4AFAB24AD61B5008402EE /* MyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4AFAA24AD61B5008402EE /* MyWebview.swift */; };
+		F2C91C8C26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C91C8B26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F2B4AFA224AD615B008402EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2B4AFA424AD615B008402EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B4AFAA24AD61B5008402EE /* MyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebview.swift; sourceTree = "<group>"; };
+		F2C91C8B26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRefreshControlHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				F2A4D41526ECD17A0054936C /* LoadingIndicatorView.swift */,
 				F2A4D41726ECD26A0054936C /* LoadingScreenView.swift */,
 				F2A4D41326ECC91D0054936C /* JsAlert.swift */,
+				F2C91C8B26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift */,
 				F2B4AF9C24AD615B008402EE /* Assets.xcassets */,
 				F2B4AFA124AD615B008402EE /* LaunchScreen.storyboard */,
 				F2B4AFA424AD615B008402EE /* Info.plist */,
@@ -169,6 +172,7 @@
 				F2B4AFAB24AD61B5008402EE /* MyWebview.swift in Sources */,
 				F2A4D41626ECD17A0054936C /* LoadingIndicatorView.swift in Sources */,
 				F2B4AF9924AD6159008402EE /* SceneDelegate.swift in Sources */,
+				F2C91C8C26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift in Sources */,
 				F2A4D41826ECD26A0054936C /* LoadingScreenView.swift in Sources */,
 				F2A4D41426ECC91D0054936C /* JsAlert.swift in Sources */,
 				F2A4D41026ECB4400054936C /* MyTextAlertView.swift in Sources */,
