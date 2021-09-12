@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2A4D41026ECB4400054936C /* MyTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D40F26ECB4400054936C /* MyTextAlertView.swift */; };
+		F2A4D41226ECBC220054936C /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41126ECBC220054936C /* WebViewModel.swift */; };
+		F2A4D41426ECC91D0054936C /* JsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41326ECC91D0054936C /* JsAlert.swift */; };
+		F2A4D41626ECD17A0054936C /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41526ECD17A0054936C /* LoadingIndicatorView.swift */; };
+		F2A4D41826ECD26A0054936C /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41726ECD26A0054936C /* LoadingScreenView.swift */; };
 		F2B4AF9724AD6159008402EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4AF9624AD6159008402EE /* AppDelegate.swift */; };
 		F2B4AF9924AD6159008402EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4AF9824AD6159008402EE /* SceneDelegate.swift */; };
 		F2B4AF9B24AD6159008402EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4AF9A24AD6159008402EE /* ContentView.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2A4D40F26ECB4400054936C /* MyTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextAlertView.swift; sourceTree = "<group>"; };
+		F2A4D41126ECBC220054936C /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		F2A4D41326ECC91D0054936C /* JsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsAlert.swift; sourceTree = "<group>"; };
+		F2A4D41526ECD17A0054936C /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		F2A4D41726ECD26A0054936C /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
 		F2B4AF9324AD6159008402EE /* SwiftUI_Webview_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Webview_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4AF9624AD6159008402EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2B4AF9824AD6159008402EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +71,16 @@
 				F2B4AF9624AD6159008402EE /* AppDelegate.swift */,
 				F2B4AF9824AD6159008402EE /* SceneDelegate.swift */,
 				F2B4AF9A24AD6159008402EE /* ContentView.swift */,
+				F2A4D40F26ECB4400054936C /* MyTextAlertView.swift */,
+				F2B4AFAA24AD61B5008402EE /* MyWebview.swift */,
+				F2A4D41126ECBC220054936C /* WebViewModel.swift */,
+				F2A4D41526ECD17A0054936C /* LoadingIndicatorView.swift */,
+				F2A4D41726ECD26A0054936C /* LoadingScreenView.swift */,
+				F2A4D41326ECC91D0054936C /* JsAlert.swift */,
 				F2B4AF9C24AD615B008402EE /* Assets.xcassets */,
 				F2B4AFA124AD615B008402EE /* LaunchScreen.storyboard */,
 				F2B4AFA424AD615B008402EE /* Info.plist */,
 				F2B4AF9E24AD615B008402EE /* Preview Content */,
-				F2B4AFAA24AD61B5008402EE /* MyWebview.swift */,
 			);
 			path = SwiftUI_Webview_tutorial;
 			sourceTree = "<group>";
@@ -150,8 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B4AF9724AD6159008402EE /* AppDelegate.swift in Sources */,
+				F2A4D41226ECBC220054936C /* WebViewModel.swift in Sources */,
 				F2B4AFAB24AD61B5008402EE /* MyWebview.swift in Sources */,
+				F2A4D41626ECD17A0054936C /* LoadingIndicatorView.swift in Sources */,
 				F2B4AF9924AD6159008402EE /* SceneDelegate.swift in Sources */,
+				F2A4D41826ECD26A0054936C /* LoadingScreenView.swift in Sources */,
+				F2A4D41426ECC91D0054936C /* JsAlert.swift in Sources */,
+				F2A4D41026ECB4400054936C /* MyTextAlertView.swift in Sources */,
 				F2B4AF9B24AD6159008402EE /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
