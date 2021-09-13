@@ -41,11 +41,7 @@ struct ContentView: View {
                 })
                 if self.shouldShowAlert{ createTextAlert() }
                 if self.isLoading{ LoadingScreenView() }
-//                Text(textString)
-//                    .font(.system(size: 26))
-//                    .fontWeight(.bold)
-//                    .background(Color.yellow)
-//                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
+
             }// ZStack
             .onReceive(myWebVM.webSiteTitleSubject, perform: { receivedWebTitle in
                 print("ContentView - receivedWebTitle: ", receivedWebTitle)
@@ -58,6 +54,11 @@ struct ContentView: View {
             .onReceive(myWebVM.shouldShowIndicator, perform: { isLoading in
                 print("ContentView - isLoading: ", isLoading)
                 self.isLoading = isLoading
+            })
+            .onReceive(myWebVM.downloadEvent, perform: { fileUrl in
+                print("ContentView - fileUrl: ", fileUrl)
+                // 다운로드된 파일을 공유한다.
+                shareSheet(url: fileUrl)
             })
         } // NavigationView
     }// body
@@ -140,6 +141,14 @@ struct ContentView: View {
 
 extension ContentView {
     
+    // 공유창 띄우기
+    func shareSheet(url: URL) {
+        print("ContentView - shareSheet() called")
+        let uiActivityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(uiActivityVC, animated: true, completion: nil)
+    }
+    
+    // 얼럿창 띄우기
     func createAlert(_ alert: JsAlert) -> Alert {
         Alert(title: Text(alert.type.description),
               message: Text(alert.message),

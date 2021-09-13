@@ -13,13 +13,15 @@ struct JsAlert: Identifiable {
     
     enum TYPE: CustomStringConvertible {
         
-        case JS_ALERT, JS_BRIDGE, BLOCKED_SITE
+        case JS_ALERT, JS_BRIDGE, BLOCKED_SITE, DOWNLOAD_FAILED, DOWNLOAD_NOT_AVAILABLE
         
         var description: String {
             switch self {
             case .JS_ALERT: return "JS_ALERT 타입"
             case .JS_BRIDGE: return "JS_BRIDGE 타입"
             case .BLOCKED_SITE: return "차단된 사이트 입니다!"
+            case .DOWNLOAD_FAILED: return "파일 다운로드 실패"
+            case .DOWNLOAD_NOT_AVAILABLE: return "파일 다운로드 불가"
             }
         }
     }
