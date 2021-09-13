@@ -9,54 +9,151 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var myWebVM : WebViewModel
+    
+    @State var jsAlert : JsAlert?
+    
+    @State var textString = ""
+    @State var shouldShowAlert = false
+    
+    @State var isLoading : Bool = false
+    
+    @State var webTitle : String = ""
+    
     var body: some View {
-//        MyWebview(urlToLoad: "https://www.naver.com")
-        
         NavigationView{
-            
+            ZStack{
+                VStack{
+                    MyWebview(urlToLoad: "https://tuentuenna.github.io/simple_js_alert/")
+                    webViewBottomTabbar
+                }
+                .navigationBarTitle(Text(webTitle), displayMode: .inline)
+                .navigationBarItems(
+                    leading: siteMenu,
+                    trailing: Button("iOS -> Js") {
+                        print("iOS -> Js 버튼 클릭")
+                        self.shouldShowAlert.toggle()
+                    }
+                )
+                .alert(item: $jsAlert, content: { alert in
+                    createAlert(alert)
+                })
+                if self.shouldShowAlert{ createTextAlert() }
+                if self.isLoading{ LoadingScreenView() }
+//                Text(textString)
+//                    .font(.system(size: 26))
+//                    .fontWeight(.bold)
+//                    .background(Color.yellow)
+//                    .offset(y: -(UIScreen.main.bounds.height * 0.3))
+            }// ZStack
+            .onReceive(myWebVM.webSiteTitleSubject, perform: { receivedWebTitle in
+                print("ContentView - receivedWebTitle: ", receivedWebTitle)
+                self.webTitle = receivedWebTitle
+            })
+            .onReceive(myWebVM.jsAlertEvent, perform: { jsAlert in
+                print("ContentView - jsAlert: ", jsAlert)
+                self.jsAlert = jsAlert
+            })
+            .onReceive(myWebVM.shouldShowIndicator, perform: { isLoading in
+                print("ContentView - isLoading: ", isLoading)
+                self.isLoading = isLoading
+            })
+        } // NavigationView
+    }// body
+    
+    // 사이트 메뉴
+    var siteMenu: some View {
+        Text("사이트 이동")
+            .foregroundColor(.blue)
+            .contextMenu(ContextMenu(menuItems: {
+                Button(action: {
+                    print("정대리 웹뷰 이동")
+                    self.myWebVM.changedUrlSubject.send(.DEV_JEONG_DAE_RI)
+                }, label: {
+                    Text("정대리 웹뷰 이동")
+                    Image("dev_jeong_dae_ri")
+                })
+                Button(action: {
+                    print("네이버로 이동")
+                    self.myWebVM.changedUrlSubject.send(.NAVER)
+                }, label: {
+                    Text("네이버 이동")
+                    Image("naver")
+                })
+                Button(action: {
+                    print("구글로 이동")
+                    self.myWebVM.changedUrlSubject.send(.GOOGLE)
+                }, label: {
+                    Text("구글 이동")
+                    Image("google")
+                })
+                
+            }))
+    }
+    
+    // 웹뷰 바텀 탭바
+    var webViewBottomTabbar : some View {
+        VStack{
+            Divider()
             HStack{
-                NavigationLink(destination:
-                    MyWebview(urlToLoad: "https://www.naver.com")
-                        .edgesIgnoringSafeArea(.all)
-                ){
-                    Text("네이버")
+                Spacer()
+                Button(action: {
+                    print("뒤로가기")
+                    self.myWebVM.webNavigationSubject.send(.BACK)
+                }, label: {
+                    Image(systemName: "arrow.backward")
                         .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .padding(20)
-                        .background(Color.green)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(20)
+                })
+                Group{
+                    Spacer()
+                    Divider()
+                    Spacer()
                 }
-                NavigationLink(destination:
-                    MyWebview(urlToLoad: "https://www.daum.net")
-                    .edgesIgnoringSafeArea(.all)
-                ){
-                    Text("다음")
+                Button(action: {
+                    print("앞으로 가기")
+                    self.myWebVM.webNavigationSubject.send(.FORWARD)
+                }, label: {
+                    Image(systemName: "arrow.forward")
                         .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .padding(20)
-                        .background(Color.orange)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(20)
+                })
+                Group{
+                    Spacer()
+                    Divider()
+                    Spacer()
                 }
-                NavigationLink(destination:
-                    MyWebview(urlToLoad: "https://www.google.com")
-                    .edgesIgnoringSafeArea(.all)
-                ){
-                    Text("구글")
+                Button(action: {
+                    print("새로고침")
+                    self.myWebVM.webNavigationSubject.send(.REFRESH)
+                }, label: {
+                    Image(systemName: "goforward")
                         .font(.system(size: 20))
-                        .fontWeight(.bold)
-                        .padding(20)
-                        .background(Color.blue)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(20)
-                }
-            }
-            
+                })
+                Spacer()
+            }.frame(height: 45)
+            Divider()
         }
-        
+    }
+    
+}
+
+
+extension ContentView {
+    
+    func createAlert(_ alert: JsAlert) -> Alert {
+        Alert(title: Text(alert.type.description),
+              message: Text(alert.message),
+              dismissButton: .default(Text("확인"), action: {
+                print("알림창 확인 버튼이 클릭되었다.")
+              }))
+    }
+    
+    // 텍스트 입력 얼럿창
+    func createTextAlert() -> MyTextAlertView {
+        MyTextAlertView(textString: $textString, showAlert: $shouldShowAlert, title: "iOS->Js 보내기", message: "")
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
