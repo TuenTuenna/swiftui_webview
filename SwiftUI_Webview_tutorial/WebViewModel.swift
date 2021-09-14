@@ -48,4 +48,6 @@ class WebViewModel: ObservableObject {
     // 로딩 여부 이벤트
     var shouldShowIndicator = PassthroughSubject<Bool, Never>()
     
+    // 파일 다운로드 이벤트
+    var downloadEvent = PassthroughSubject<URL, Never>()
 }

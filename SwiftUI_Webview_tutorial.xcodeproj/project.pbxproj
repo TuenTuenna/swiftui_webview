@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F203E50926EF71C3009442A3 /* MimeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203E50826EF71C3009442A3 /* MimeTypes.swift */; };
+		F203E50B26EF71FD009442A3 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203E50A26EF71FD009442A3 /* String+Ext.swift */; };
 		F2A4D41026ECB4400054936C /* MyTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D40F26ECB4400054936C /* MyTextAlertView.swift */; };
 		F2A4D41226ECBC220054936C /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41126ECBC220054936C /* WebViewModel.swift */; };
 		F2A4D41426ECC91D0054936C /* JsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4D41326ECC91D0054936C /* JsAlert.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F203E50826EF71C3009442A3 /* MimeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeTypes.swift; sourceTree = "<group>"; };
+		F203E50A26EF71FD009442A3 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		F2A4D40F26ECB4400054936C /* MyTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextAlertView.swift; sourceTree = "<group>"; };
 		F2A4D41126ECBC220054936C /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		F2A4D41326ECC91D0054936C /* JsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsAlert.swift; sourceTree = "<group>"; };
@@ -78,8 +82,10 @@
 				F2A4D41126ECBC220054936C /* WebViewModel.swift */,
 				F2A4D41526ECD17A0054936C /* LoadingIndicatorView.swift */,
 				F2A4D41726ECD26A0054936C /* LoadingScreenView.swift */,
-				F2A4D41326ECC91D0054936C /* JsAlert.swift */,
 				F2C91C8B26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift */,
+				F2A4D41326ECC91D0054936C /* JsAlert.swift */,
+				F203E50A26EF71FD009442A3 /* String+Ext.swift */,
+				F203E50826EF71C3009442A3 /* MimeTypes.swift */,
 				F2B4AF9C24AD615B008402EE /* Assets.xcassets */,
 				F2B4AFA124AD615B008402EE /* LaunchScreen.storyboard */,
 				F2B4AFA424AD615B008402EE /* Info.plist */,
@@ -173,6 +179,8 @@
 				F2A4D41626ECD17A0054936C /* LoadingIndicatorView.swift in Sources */,
 				F2B4AF9924AD6159008402EE /* SceneDelegate.swift in Sources */,
 				F2C91C8C26EDEF6700F812E2 /* WebViewRefreshControlHelper.swift in Sources */,
+				F203E50B26EF71FD009442A3 /* String+Ext.swift in Sources */,
+				F203E50926EF71C3009442A3 /* MimeTypes.swift in Sources */,
 				F2A4D41826ECD26A0054936C /* LoadingScreenView.swift in Sources */,
 				F2A4D41426ECC91D0054936C /* JsAlert.swift in Sources */,
 				F2A4D41026ECB4400054936C /* MyTextAlertView.swift in Sources */,
